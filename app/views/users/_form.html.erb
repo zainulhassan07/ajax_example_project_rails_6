@@ -21,6 +21,17 @@
       <%= form.label :contact %>
       <%= form.text_field :contact, class: 'form-control' %>
     </div>
+    <h2>Items</h2>
+
+  <div id="items">
+    <%= form.fields_for :items do |item_form| %>
+      <%= render 'item_fields', f: item_form %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'Add item', form, :items, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary btn-lg close-modal" data-bs-dismiss="modal">Close</button>    

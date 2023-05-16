@@ -17,3 +17,4 @@ global.$ = jQuery;
 
 import 'stylesheets/application';
 import'bootstrap';
+require("cocoon")
